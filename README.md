@@ -4,7 +4,7 @@ A simple Javascript data storage. No dependencies.
 
 ## Get started
 
-Import the file on your project [storage.js](https://raw.githubusercontent.com/ruizalexandre/data-storage/main/storage.js). 
+Import the file on your project [storage.min.js](https://raw.githubusercontent.com/ruizalexandre/data-storage/main/storage.min.js). 
 
 ```html
 <!DOCTYPE html>
