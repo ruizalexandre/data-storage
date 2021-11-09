@@ -2,9 +2,11 @@
 
 A simple Javascript data storage. No dependencies.
 
+![](https://img.shields.io/badge/version-0.0.2-green)
+
 ## Get started
 
-Import the file on your project [storage.min.js](https://cdn.jsdelivr.net/gh/ruizalexandre/data-storage/storage.min.js). 
+Import the file on your project [storage.min.js](https://cdn.jsdelivr.net/gh/ruizalexandre/data-storage@0.0.2/storage.min.js). 
 
 ```html
 <!DOCTYPE html>
@@ -17,7 +19,7 @@ Import the file on your project [storage.min.js](https://cdn.jsdelivr.net/gh/rui
   </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/ruizalexandre/data-storage/storage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ruizalexandre/data-storage@0.0.2/storage.min.js"></script>
   </body>
 </html>
 ```
