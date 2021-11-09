@@ -7,9 +7,12 @@ function DataStorage(parameters) {
   var _syncWithStorage = parameters && parameters.syncWithStorage || undefined;
 
   if (_syncWithStorage) {
-    _state = JSON.parse(_syncWithStorage.getItem('DataStorage__' + _key));
+    var fromStorage = JSON.parse(_syncWithStorage.getItem('DataStorage__' + _key));
+    if (fromStorage) {
+      _state = fromStorage;
+    }
   }
-
+  
   function _performSyncWithStorage() {
     if (_syncWithStorage) {
       var key = 'DataStorage__' + _key;
