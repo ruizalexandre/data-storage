@@ -17,7 +17,7 @@ Import the file on your project [storage.min.js](https://raw.githubusercontent.c
   </head>
 
   <body>
-    <script src="https://raw.githubusercontent.com/ruizalexandre/data-storage/main/storage.js"></script>
+    <script src="https://raw.githubusercontent.com/ruizalexandre/data-storage/main/storage.min.js"></script>
   </body>
 </html>
 ```
