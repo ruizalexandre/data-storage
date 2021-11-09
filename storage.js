@@ -12,7 +12,7 @@ function DataStorage(parameters) {
       _state = fromStorage;
     }
   }
-  
+
   function _performSyncWithStorage() {
     if (_syncWithStorage) {
       var key = 'DataStorage__' + _key;
@@ -52,9 +52,15 @@ function DataStorage(parameters) {
   }
 
   function _setData(newState, replace) {
-    _state = replace
-      ? newState
-      : Object.assign({}, _state, newState);
+    if (newState instanceof Function) {
+      _state = replace
+        ? newState(_getData())
+        : Object.assign({}, _state, newState(_getData()));
+    } else {
+      _state = replace
+        ? newState
+        : Object.assign({}, _state, newState);
+    }
 
     Object.keys(_subscribers).forEach(function (subKey) {
       _subscribers[subKey](_freezeState(_state));
@@ -78,6 +84,8 @@ function DataStorage(parameters) {
   function _subscribe(callback) {
     var currentId = _lastSubscriberId++;
     _subscribers[currentId] = callback;
+    callback(_getData());
+
     return {
       id: 'DataStorage_' + _key + '_subscriber_' + currentId,
       unsubscribe: function () {
