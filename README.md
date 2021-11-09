@@ -119,6 +119,14 @@ userStorage.setData({
   firstname: '',
   age: 0
 }, true);
+
+// Function with previous data
+userStorage.setData(function (data) {
+  return { // Work also with partial data
+    name: 'Aragorn',
+    age: 87
+  }; 
+}, true);
 ```
 
 ### Get data
@@ -203,7 +211,6 @@ userStorageSubscription.unsubscribe();
 ```
 
 ### Append storage
-
 
 ```javascript
 var userStorage = new DataStorage({
